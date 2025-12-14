@@ -34,3 +34,16 @@ offset_top = -309.42096
 offset_right = 978.39233
 offset_bottom = 340.5357
 rotation = 1.5707964
+
+[node name="Border" type="ColorRect" parent="."]
+offset_left = 501.0
+offset_right = 536.0
+offset_bottom = 648.0
+color = Color(0.07815645, 0.07815645, 0.07815645, 1)
+
+[node name="WindowBG2" type="ColorRect" parent="."]
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 502.0
+offset_bottom = 648.0
+color = Color(0.1087827, 0.2381224, 0.25202245, 1)
