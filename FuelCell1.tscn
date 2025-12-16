@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cm7gul3u6qpb7"]
+
+[ext_resource type="Texture2D" uid="uid://br1bcui1sg8cg" path="res://Fuel/ParticleYellow.png" id="1_q7hlp"]
+[ext_resource type="Script" uid="uid://5ulv36w6l8ag" path="res://fuel_cell_1.gd" id="1_wn3cm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q7hlp"]
+bounce = 2.47
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wn3cm"]
+radius = 14.0
+
+[sub_resource type="Curve" id="Curve_wn3cm"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="FuelCell1" type="RigidBody2D" groups=["FuelCell1"]]
+physics_material_override = SubResource("PhysicsMaterial_q7hlp")
+gravity_scale = 0.1
+script = ExtResource("1_wn3cm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.06400001, 0.064)
+texture = ExtResource("1_q7hlp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wn3cm")
+
+[node name="Area2D" type="Area2D" parent="." groups=["FuelCell1"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wn3cm")
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 10
+texture = ExtResource("1_q7hlp")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 17.74
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 83.12
+initial_velocity_max = 152.51
+scale_amount_min = 0.01
+scale_amount_max = 0.01
+scale_amount_curve = SubResource("Curve_wn3cm")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

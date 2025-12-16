@@ -1,7 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch5c0snhgfhyt"]
+[gd_scene load_steps=10 format=3 uid="uid://ch5c0snhgfhyt"]
 
 [ext_resource type="Shader" uid="uid://yjy85yh3pxj5" path="res://Galaxy.gdshader" id="1_f2jf0"]
+[ext_resource type="Script" uid="uid://kcer15n6g22i" path="res://MainControl.gd" id="1_qvpww"]
 [ext_resource type="Texture2D" uid="uid://bjq08ssaso6lt" path="res://reactormain.png" id="1_r6n28"]
+[ext_resource type="Script" uid="uid://cr13q8ywlaj4r" path="res://addons/donut_collision_polygon2D/donut_collision_polygon2D.gd" id="3_a3v7p"]
+[ext_resource type="Texture2D" uid="uid://b4pqhqe1tws26" path="res://CurrencyBG.png" id="4_e21jg"]
+[ext_resource type="FontFile" uid="uid://bhsy68saf4c0y" path="res://Tektur-VariableFont_wdth,wght.ttf" id="5_3fthw"]
+[ext_resource type="PackedScene" uid="uid://cm7gul3u6qpb7" path="res://FuelCell1.tscn" id="7_f1dtx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e21jg"]
+radius = 337.6145
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a3v7p"]
 shader = ExtResource("1_f2jf0")
@@ -11,6 +19,7 @@ shader_parameter/color_1 = Color(3.946722e-06, 0.81897396, 0.63921064, 1)
 shader_parameter/color_2 = Color(0.9074961, 0.5040287, 0.52055395, 1)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_qvpww")
 
 [node name="WindowBG1" type="ColorRect" parent="."]
 offset_left = 535.0
@@ -26,14 +35,36 @@ position = Vector2(848, 320.00003)
 scale = Vector2(0.5785001, 0.5785001)
 texture = ExtResource("1_r6n28")
 
+[node name="Gravity" type="Area2D" parent="Reactormain"]
+gravity_space_override = 3
+gravity_point = true
+linear_damp_space_override = 3
+linear_damp = 1.0
+angular_damp_space_override = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reactormain/Gravity"]
+shape = SubResource("CircleShape2D_e21jg")
+debug_color = Color(0, 0.6, 0.69803923, 0.12156863)
+
 [node name="ReactorBG" type="ColorRect" parent="Reactormain"]
 z_index = -1
 material = SubResource("ShaderMaterial_a3v7p")
-offset_left = 352.6361
+offset_left = 344.84363
 offset_top = -309.42096
-offset_right = 978.39233
-offset_bottom = 340.5357
+offset_right = 965.4049
+offset_bottom = 332.74316
 rotation = 1.5707964
+
+[node name="ReactorCollisions" type="StaticBody2D" parent="Reactormain"]
+position = Vector2(-1465.8597, -553.15466)
+scale = Vector2(1.7286083, 1.7286083)
+
+[node name="DonutCollisionPolygon2D" type="CollisionPolygon2D" parent="Reactormain/ReactorCollisions"]
+position = Vector2(846.50006, 321.5)
+scale = Vector2(17.585226, 17.414776)
+polygon = PackedVector2Array(6.735335e-16, -11, 2.1459935, -10.788638, 4.2095175, -10.162675, 6.111273, -9.146166, 7.7781744, -7.7781744, 9.146166, -6.111273, 10.162675, -4.2095175, 10.788638, -2.1459935, 11, 0, 10.788638, 2.1459935, 10.162675, 4.2095175, 9.146166, 6.111273, 7.7781744, 7.7781744, 6.111273, 9.146166, 4.2095175, 10.162675, 2.1459935, 10.788638, 6.735335e-16, 11, -2.1459935, 10.788638, -4.2095175, 10.162675, -6.111273, 9.146166, -7.7781744, 7.7781744, -9.146166, 6.111273, -10.162675, 4.2095175, -10.788638, 2.1459935, -11, 1.347067e-15, -10.788638, -2.1459935, -10.162675, -4.2095175, -9.146166, -6.111273, -7.7781744, -7.7781744, -6.111273, -9.146166, -4.2095175, -10.162675, -2.1459935, -10.788638, -2.0206005e-15, -11, -1.6532186e-15, -9, -1.7558129, -8.827067, -3.444151, -8.314916, -5.000132, -7.4832263, -6.3639607, -6.3639607, -7.4832263, -5.000132, -8.314916, -3.444151, -8.827067, -1.7558129, -9, 1.1021457e-15, -8.827067, 1.7558129, -8.314916, 3.444151, -7.4832263, 5.000132, -6.3639607, 6.3639607, -5.000132, 7.4832263, -3.444151, 8.314916, -1.7558129, 8.827067, 5.5107286e-16, 9, 1.7558129, 8.827067, 3.444151, 8.314916, 5.000132, 7.4832263, 6.3639607, 6.3639607, 7.4832263, 5.000132, 8.314916, 3.444151, 8.827067, 1.7558129, 9, 0, 8.827067, -1.7558129, 8.314916, -3.444151, 7.4832263, -5.000132, 6.3639607, -6.3639607, 5.000132, -7.4832263, 3.444151, -8.314916, 1.7558129, -8.827067, 5.5107286e-16, -9, 0.0001, -10.9999)
+script = ExtResource("3_a3v7p")
+metadata/_custom_type_script = "uid://cr13q8ywlaj4r"
 
 [node name="Border" type="ColorRect" parent="."]
 offset_left = 501.0
@@ -42,8 +73,69 @@ offset_bottom = 648.0
 color = Color(0.07815645, 0.07815645, 0.07815645, 1)
 
 [node name="WindowBG2" type="ColorRect" parent="."]
-offset_left = 8.0
 offset_top = 1.0
 offset_right = 502.0
 offset_bottom = 648.0
-color = Color(0.1087827, 0.2381224, 0.25202245, 1)
+color = Color(0.32642013, 0.14606926, 0.22705829, 1)
+
+[node name="CurrencyBG" type="TextureRect" parent="."]
+offset_left = 104.0
+offset_top = 15.0
+offset_right = 365.0
+offset_bottom = 163.0
+texture = ExtResource("4_e21jg")
+expand_mode = 1
+
+[node name="Money" type="Label" parent="CurrencyBG"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 46.0
+offset_right = 136.0
+offset_bottom = 126.0
+theme_override_fonts/font = ExtResource("5_3fthw")
+theme_override_font_sizes/font_size = 39
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Research" type="Label" parent="CurrencyBG"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 46.0
+offset_right = 260.0
+offset_bottom = 126.0
+theme_override_fonts/font = ExtResource("5_3fthw")
+theme_override_font_sizes/font_size = 39
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResearchSymbol" type="Label" parent="CurrencyBG"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 14.0
+offset_right = 272.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("5_3fthw")
+theme_override_font_sizes/font_size = 39
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoneySymbol" type="Label" parent="CurrencyBG"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 136.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("5_3fthw")
+theme_override_font_sizes/font_size = 39
+text = "$"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FuelCell1" parent="." instance=ExtResource("7_f1dtx")]
+position = Vector2(829, 434)
+
+[node name="FuelCell2" parent="." instance=ExtResource("7_f1dtx")]
+position = Vector2(905, 203)
