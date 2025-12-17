@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjq08ssaso6lt"
-path="res://.godot/imported/reactormain.png-4c97e327324dd0ed82d896d4f41f3d7a.ctex"
+uid="uid://cfbgtdbbsus6j"
+path="res://.godot/imported/PlayNormal.png-99a03f1eab92a7e69797287aefaf74d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://reactormain.png"
-dest_files=["res://.godot/imported/reactormain.png-4c97e327324dd0ed82d896d4f41f3d7a.ctex"]
+source_file="res://Assets/UI/Buttons/Play/PlayNormal.png"
+dest_files=["res://.godot/imported/PlayNormal.png-99a03f1eab92a7e69797287aefaf74d5.ctex"]
 
 [params]
 

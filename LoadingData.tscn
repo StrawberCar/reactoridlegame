@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2whj5ut0p355"]
+
+[ext_resource type="Texture2D" uid="uid://dytr11qkw8x1p" path="res://Assets/UI/loading.png" id="1_o8tob"]
+[ext_resource type="Script" uid="uid://bjbhiyshojex" path="res://loadingData.gd" id="1_vn2fi"]
+[ext_resource type="FontFile" uid="uid://bhsy68saf4c0y" path="res://Assets/Fonts/Tektur-VariableFont_wdth,wght.ttf" id="2_vn2fi"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vn2fi")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.098728366, 0.09872835, 0.09872835, 1)
+metadata/_edit_lock_ = true
+
+[node name="Loading" type="Sprite2D" parent="."]
+position = Vector2(554, 218)
+scale = Vector2(0.3173828, 0.45703125)
+texture = ExtResource("1_o8tob")
+
+[node name="Status" type="Label" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 447.0
+offset_right = 1055.0
+offset_bottom = 584.0
+theme_override_fonts/font = ExtResource("2_vn2fi")
+theme_override_font_sizes/font_size = 100
+text = "Loading Save Data..."
+horizontal_alignment = 1
+vertical_alignment = 1

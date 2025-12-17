@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cm7gul3u6qpb7"]
+[gd_scene load_steps=7 format=3 uid="uid://cm7gul3u6qpb7"]
 
-[ext_resource type="Texture2D" uid="uid://br1bcui1sg8cg" path="res://Fuel/ParticleYellow.png" id="1_q7hlp"]
+[ext_resource type="Texture2D" uid="uid://br1bcui1sg8cg" path="res://Assets/Fuel/ParticleYellow.png" id="1_q7hlp"]
 [ext_resource type="Script" uid="uid://5ulv36w6l8ag" path="res://fuel_cell_1.gd" id="1_wn3cm"]
+[ext_resource type="AudioStream" uid="uid://b0ehil8wer8r8" path="res://Assets/Sounds/fuelHit.mp3" id="2_ouir3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q7hlp"]
 bounce = 2.47
@@ -17,6 +18,9 @@ point_count = 2
 physics_material_override = SubResource("PhysicsMaterial_q7hlp")
 gravity_scale = 0.1
 script = ExtResource("1_wn3cm")
+
+[node name="FuelHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ouir3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.06400001, 0.064)

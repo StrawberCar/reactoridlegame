@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bhsy68saf4c0y"
-path="res://.godot/imported/Tektur-VariableFont_wdth,wght.ttf-d4c26cf4faa2c23717d8e196173d9b48.fontdata"
+uid="uid://dyblvocul2ox7"
+path="res://.godot/imported/Seven Segment.ttf-29ebbdb959e7294ac16eaa36e4cd8f0e.fontdata"
 
 [deps]
 
-source_file="res://Tektur-VariableFont_wdth,wght.ttf"
-dest_files=["res://.godot/imported/Tektur-VariableFont_wdth,wght.ttf-d4c26cf4faa2c23717d8e196173d9b48.fontdata"]
+source_file="res://Assets/Fonts/Seven Segment.ttf"
+dest_files=["res://.godot/imported/Seven Segment.ttf-29ebbdb959e7294ac16eaa36e4cd8f0e.fontdata"]
 
 [params]
 

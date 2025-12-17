@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4pqhqe1tws26"
-path="res://.godot/imported/CurrencyBG.png-6d06402e158a7a19680455e03ac16203.ctex"
+uid="uid://br1bcui1sg8cg"
+path="res://.godot/imported/ParticleYellow.png-99addac8d6e45904076add1068ea7dac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CurrencyBG.png"
-dest_files=["res://.godot/imported/CurrencyBG.png-6d06402e158a7a19680455e03ac16203.ctex"]
+source_file="res://Assets/Fuel/ParticleYellow.png"
+dest_files=["res://.godot/imported/ParticleYellow.png-99addac8d6e45904076add1068ea7dac.ctex"]
 
 [params]
 

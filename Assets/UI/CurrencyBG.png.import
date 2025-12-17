@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dye0ticnduut0"
-path="res://.godot/imported/FuelEmmiter1.png-0428ba22eb1cc74cd807fafadd890689.ctex"
+uid="uid://b4pqhqe1tws26"
+path="res://.godot/imported/CurrencyBG.png-becc60b1be1c81ef3bba8296671264b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FuelEmmiter1.png"
-dest_files=["res://.godot/imported/FuelEmmiter1.png-0428ba22eb1cc74cd807fafadd890689.ctex"]
+source_file="res://Assets/UI/CurrencyBG.png"
+dest_files=["res://.godot/imported/CurrencyBG.png-becc60b1be1c81ef3bba8296671264b0.ctex"]
 
 [params]
 

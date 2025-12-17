@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xfkvttl8cxns"
-path="res://.godot/imported/icon.png-5ad2e6e2e39e89ee29d5171fb300a340.ctex"
+uid="uid://cobjcgj7yy1k4"
+path="res://.godot/imported/ReactorCapacity.png-3688f188b0c4e84b9f70ade47bde706f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://example/icon.png"
-dest_files=["res://.godot/imported/icon.png-5ad2e6e2e39e89ee29d5171fb300a340.ctex"]
+source_file="res://Assets/UI/ReactorCapacity.png"
+dest_files=["res://.godot/imported/ReactorCapacity.png-3688f188b0c4e84b9f70ade47bde706f.ctex"]
 
 [params]
 

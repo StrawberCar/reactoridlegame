@@ -2,14 +2,14 @@
 
 [ext_resource type="Shader" uid="uid://yjy85yh3pxj5" path="res://Galaxy.gdshader" id="1_f2jf0"]
 [ext_resource type="Script" uid="uid://kcer15n6g22i" path="res://MainControl.gd" id="1_qvpww"]
-[ext_resource type="Texture2D" uid="uid://bjq08ssaso6lt" path="res://reactormain.png" id="1_r6n28"]
+[ext_resource type="Texture2D" uid="uid://bjq08ssaso6lt" path="res://Assets/Gameplay/reactormain.png" id="1_r6n28"]
 [ext_resource type="Script" uid="uid://cr13q8ywlaj4r" path="res://addons/donut_collision_polygon2D/donut_collision_polygon2D.gd" id="3_a3v7p"]
-[ext_resource type="Texture2D" uid="uid://b4pqhqe1tws26" path="res://CurrencyBG.png" id="4_e21jg"]
-[ext_resource type="FontFile" uid="uid://bhsy68saf4c0y" path="res://Tektur-VariableFont_wdth,wght.ttf" id="5_3fthw"]
+[ext_resource type="Texture2D" uid="uid://b4pqhqe1tws26" path="res://Assets/UI/CurrencyBG.png" id="4_e21jg"]
+[ext_resource type="FontFile" uid="uid://bhsy68saf4c0y" path="res://Assets/Fonts/Tektur-VariableFont_wdth,wght.ttf" id="5_3fthw"]
 [ext_resource type="PackedScene" uid="uid://cm7gul3u6qpb7" path="res://FuelCell1.tscn" id="7_f1dtx"]
-[ext_resource type="Texture2D" uid="uid://dye0ticnduut0" path="res://FuelEmmiter1.png" id="8_a3gmt"]
-[ext_resource type="Texture2D" uid="uid://cobjcgj7yy1k4" path="res://ReactorCapacity.png" id="9_4bbnj"]
-[ext_resource type="FontFile" uid="uid://dyblvocul2ox7" path="res://Seven Segment.ttf" id="10_8gio7"]
+[ext_resource type="Texture2D" uid="uid://dye0ticnduut0" path="res://Assets/Emitters/FuelEmmiter1.png" id="8_a3gmt"]
+[ext_resource type="Texture2D" uid="uid://cobjcgj7yy1k4" path="res://Assets/UI/ReactorCapacity.png" id="9_4bbnj"]
+[ext_resource type="FontFile" uid="uid://dyblvocul2ox7" path="res://Assets/Fonts/Seven Segment.ttf" id="10_8gio7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e21jg"]
 radius = 337.6145
@@ -133,10 +133,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FuelCell1" parent="." instance=ExtResource("7_f1dtx")]
-position = Vector2(829, 434)
+position = Vector2(879, 221)
 
 [node name="FuelCell2" parent="." instance=ExtResource("7_f1dtx")]
-position = Vector2(905, 203)
+position = Vector2(754, 393)
 
 [node name="FuelEmmiter1" type="Sprite2D" parent="."]
 z_index = 1
