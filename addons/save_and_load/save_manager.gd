@@ -5,12 +5,12 @@ extends Node
 const save_path = "user://data"
 
 # Capabilities
-@export var autoload = false
-@export var autosave = false
+@export var autoload = true
+@export var autosave = true
 @export var interval = 60
 
 # Developer Options
-var encryption = true ## Never change if the project was executed before!
+var encryption = false ## Never change if the project was executed before!
 
 func _ready() -> void:
 	if autoload:

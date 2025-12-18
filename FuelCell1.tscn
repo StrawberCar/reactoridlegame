@@ -8,7 +8,7 @@
 bounce = 2.47
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wn3cm"]
-radius = 14.0
+radius = 7.0
 
 [sub_resource type="Curve" id="Curve_wn3cm"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -23,7 +23,7 @@ script = ExtResource("1_wn3cm")
 stream = ExtResource("2_ouir3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.06400001, 0.064)
+scale = Vector2(0.032000005, 0.031999998)
 texture = ExtResource("1_q7hlp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

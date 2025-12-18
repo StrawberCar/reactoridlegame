@@ -5,11 +5,12 @@
 [node name="SaveManager" type="Node"]
 script = ExtResource("1_cungw")
 data = {
+"FuelCapacity": 2,
+"FuelSpeed": 3,
 "Money": 0,
 "Research": 0
 }
-autoload = true
-autosave = true
+interval = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0

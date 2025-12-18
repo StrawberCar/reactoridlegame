@@ -1,4 +1,4 @@
 extends Node
 
-var money = 0
-var research = 0
+# Game Calculations
+var currentcapacity = 0

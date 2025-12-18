@@ -1,7 +1,13 @@
 extends Control
 
+@onready var newgame = 0
+@onready var bypass: bool
 
-
+#func _ready() -> void:
+	#if SaveManager.data.NewGame == true:
+		#bypass = false
+	#else: 
+		#bypass == true
 
 func _on_play_pressed() -> void:
 	$Click.play()
