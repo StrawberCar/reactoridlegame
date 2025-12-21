@@ -285,7 +285,8 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_05ano")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_y60di")
 theme_override_styles/focus = SubResource("StyleBoxFlat_g5t3y")
 toggle_mode = true
-text = "On"
+button_pressed = true
+text = "Off"
 
 [connection signal="pressed" from="SpawnFuel" to="." method="_on_spawn_fuel_pressed"]
 [connection signal="toggled" from="AutoFuel" to="." method="_on_auto_fuel_toggled"]

@@ -24,6 +24,7 @@ color = Color(0.098728366, 0.09872835, 0.09872835, 1)
 metadata/_edit_lock_ = true
 
 [node name="Loading" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(554, 218)
 scale = Vector2(0.3173828, 0.45703125)
 texture = ExtResource("1_o8tob")
