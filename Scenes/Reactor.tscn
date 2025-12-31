@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://ch5c0snhgfhyt"]
+[gd_scene load_steps=23 format=3 uid="uid://ch5c0snhgfhyt"]
 
-[ext_resource type="Shader" uid="uid://yjy85yh3pxj5" path="res://Galaxy.gdshader" id="1_f2jf0"]
-[ext_resource type="Script" uid="uid://kcer15n6g22i" path="res://MainControl.gd" id="1_qvpww"]
+[ext_resource type="Shader" uid="uid://yjy85yh3pxj5" path="res://Shaders/Galaxy.gdshader" id="1_f2jf0"]
+[ext_resource type="Script" uid="uid://kcer15n6g22i" path="res://Scenes/MainControl.gd" id="1_qvpww"]
 [ext_resource type="Texture2D" uid="uid://bjq08ssaso6lt" path="res://Assets/Gameplay/reactormain.png" id="1_r6n28"]
 [ext_resource type="AudioStream" uid="uid://bx0ktm4g6tgmw" path="res://Assets/Sounds/Click.mp3" id="2_8gio7"]
 [ext_resource type="Script" uid="uid://cr13q8ywlaj4r" path="res://addons/donut_collision_polygon2D/donut_collision_polygon2D.gd" id="3_a3v7p"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dye0ticnduut0" path="res://Assets/Emitters/FuelEmmiter1.png" id="8_a3gmt"]
 [ext_resource type="Texture2D" uid="uid://cobjcgj7yy1k4" path="res://Assets/UI/ReactorCapacity.png" id="9_4bbnj"]
 [ext_resource type="FontFile" uid="uid://dyblvocul2ox7" path="res://Assets/Fonts/Seven Segment.ttf" id="10_8gio7"]
+[ext_resource type="Script" uid="uid://b2bk3egvjxtwg" path="res://Scenes/spawn_fuel_button.gd" id="11_p8u1r"]
+[ext_resource type="AudioStream" uid="uid://bsl8dm6jm2jxw" path="res://Assets/Sounds/hover.mp3" id="12_dug8v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e21jg"]
 radius = 337.6145
@@ -271,6 +273,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0crdy")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_y60di")
 theme_override_styles/focus = SubResource("StyleBoxFlat_y31bo")
 text = "Add Fuel"
+script = ExtResource("11_p8u1r")
+
+[node name="Hover" type="AudioStreamPlayer" parent="SpawnFuel"]
+stream = ExtResource("12_dug8v")
 
 [node name="AutoFuel" type="Button" parent="."]
 offset_left = 381.0
@@ -288,5 +294,6 @@ toggle_mode = true
 button_pressed = true
 text = "Off"
 
+[connection signal="mouse_entered" from="SpawnFuel" to="SpawnFuel" method="_on_mouse_entered"]
 [connection signal="pressed" from="SpawnFuel" to="." method="_on_spawn_fuel_pressed"]
 [connection signal="toggled" from="AutoFuel" to="." method="_on_auto_fuel_toggled"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2whj5ut0p355"]
 
 [ext_resource type="Texture2D" uid="uid://dytr11qkw8x1p" path="res://Assets/UI/loading.png" id="1_o8tob"]
-[ext_resource type="Script" uid="uid://bjbhiyshojex" path="res://loadingData.gd" id="1_vn2fi"]
+[ext_resource type="Script" uid="uid://bjbhiyshojex" path="res://Scenes/loadingData.gd" id="1_vn2fi"]
 [ext_resource type="FontFile" uid="uid://bhsy68saf4c0y" path="res://Assets/Fonts/Tektur-VariableFont_wdth,wght.ttf" id="2_vn2fi"]
 
 [node name="Control" type="Control"]

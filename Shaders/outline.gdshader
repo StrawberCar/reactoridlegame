@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 uniform bool allow_out_of_bounds = true;
-uniform float outline_thickness: hint_range(0.0, 16.0, 1.0) = 1.0;
+uniform float outline_thickness: hint_range(0.0, 20.0, 1.0) = 1.0;
 uniform vec4 outline_color: source_color = vec4(1.0);
 
 bool is_inside_usquare(vec2 x) {
@@ -37,7 +37,7 @@ void fragment() {
 		}
 
 		float alpha = 0.0;
-		
+
 		for (float y = 1.0; y <= outline_thickness; y++) {
 			for (float x = 0.0; x <= y; x++) {
 				if (length(vec2(x, y - 0.5)) > outline_thickness) break;
@@ -61,10 +61,10 @@ void fragment() {
 						if (1.0 - alpha < 0.0001) break;
 					}
 				}
-				
+
 				if (1.0 - alpha < 0.0001) break;
 			}
-				
+
 			if (1.0 - alpha < 0.0001) break;
 		}
 

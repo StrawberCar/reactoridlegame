@@ -13,7 +13,6 @@ config_version=5
 config/name="Reactor"
 run/main_scene="uid://dunn3mvpfg8ou"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
@@ -27,6 +26,15 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/donut_collision_polygon2D/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "blue",
+"res://Scenes/": "green",
+"res://Shaders/": "pink",
+"res://addons/": "red"
+}
 
 [global_group]
 

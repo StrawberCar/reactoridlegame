@@ -3,7 +3,7 @@ extends Node2D
 @onready var moneytxt = $CurrencyBG/Money
 @onready var researchtxt = $CurrencyBG/Research
 @onready var capacitytxt = $CapacityBG/CapacityText
-@onready var fuel1 = preload("res://FuelCell1.tscn")
+@onready var fuel1 = preload("res://Scenes/FuelCell1.tscn")
 
 @onready var currentcapacity = SaveManager.data.FuelCapacity
 @onready var fuelcapacity = SaveManager.data.FuelCapacity

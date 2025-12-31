@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://dunn3mvpfg8ou"]
+
+[ext_resource type="Script" uid="uid://wvoa3qpx57ns" path="res://Scenes/main_menu.gd" id="1_xim88"]
+[ext_resource type="Shader" uid="uid://yjy85yh3pxj5" path="res://Shaders/Galaxy.gdshader" id="2_koqhg"]
+[ext_resource type="Shader" uid="uid://vpk3rm6j0ch2" path="res://Shaders/outline.gdshader" id="3_cmrfp"]
+[ext_resource type="Texture2D" uid="uid://dhe3gut22io07" path="res://Assets/UI/CollidleLogo.png" id="4_loo7a"]
+[ext_resource type="Texture2D" uid="uid://cfbgtdbbsus6j" path="res://Assets/UI/Buttons/Play/PlayNormal.png" id="5_if7li"]
+[ext_resource type="Texture2D" uid="uid://vmhrol48qg7m" path="res://Assets/UI/Buttons/Play/PlayPressed.png" id="6_rrcx7"]
+[ext_resource type="AudioStream" uid="uid://bx0ktm4g6tgmw" path="res://Assets/Sounds/Click.mp3" id="7_fh7cp"]
+[ext_resource type="AudioStream" uid="uid://bsl8dm6jm2jxw" path="res://Assets/Sounds/hover.mp3" id="8_koqhg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eiy7p"]
+shader = ExtResource("2_koqhg")
+shader_parameter/movement_speed = 0.4610000218975
+shader_parameter/movement_scale = 1.190000056525
+shader_parameter/color_1 = Color(1, 1, 1, 1)
+shader_parameter/color_2 = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7r1g0"]
+shader = ExtResource("3_cmrfp")
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 20.0
+shader_parameter/outline_color = Color(0.8266879, 0.826688, 0.826688, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cqjrg"]
+shader = ExtResource("3_cmrfp")
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 7.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xim88")
+
+[node name="BG" type="ColorRect" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_eiy7p")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1152.0
+offset_top = 5.041759e-05
+offset_right = 647.5576
+offset_bottom = 504.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+metadata/_edit_lock_ = true
+
+[node name="Logo" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("ShaderMaterial_7r1g0")
+layout_mode = 0
+offset_left = 421.0
+offset_top = 28.0
+offset_right = 1213.0
+offset_bottom = 516.0
+texture = ExtResource("4_loo7a")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Play" type="TextureButton" parent="."]
+material = SubResource("ShaderMaterial_cqjrg")
+layout_mode = 0
+offset_left = 48.0
+offset_top = 432.0
+offset_right = 416.0
+offset_bottom = 632.0
+texture_normal = ExtResource("5_if7li")
+texture_pressed = ExtResource("6_rrcx7")
+texture_hover = ExtResource("6_rrcx7")
+texture_focused = ExtResource("6_rrcx7")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_fh7cp")
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_koqhg")
+
+[connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

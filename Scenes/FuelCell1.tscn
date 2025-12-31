@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cm7gul3u6qpb7"]
 
-[ext_resource type="Texture2D" uid="uid://br1bcui1sg8cg" path="res://Assets/Fuel/ParticleYellow.png" id="1_q7hlp"]
-[ext_resource type="Script" uid="uid://5ulv36w6l8ag" path="res://fuel_cell_1.gd" id="1_wn3cm"]
-[ext_resource type="AudioStream" uid="uid://b0ehil8wer8r8" path="res://Assets/Sounds/fuelHit.mp3" id="2_ouir3"]
+[ext_resource type="Script" uid="uid://5ulv36w6l8ag" path="res://Scenes/fuel_cell_1.gd" id="1_p2cvj"]
+[ext_resource type="AudioStream" uid="uid://b0ehil8wer8r8" path="res://Assets/Sounds/fuelHit.mp3" id="2_j455i"]
+[ext_resource type="Texture2D" uid="uid://br1bcui1sg8cg" path="res://Assets/Fuel/ParticleYellow.png" id="3_467yg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q7hlp"]
 bounce = 2.47
@@ -17,14 +17,14 @@ point_count = 2
 [node name="FuelCell1" type="RigidBody2D" groups=["FuelCell1"]]
 physics_material_override = SubResource("PhysicsMaterial_q7hlp")
 gravity_scale = 0.1
-script = ExtResource("1_wn3cm")
+script = ExtResource("1_p2cvj")
 
 [node name="FuelHit" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_ouir3")
+stream = ExtResource("2_j455i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.032000005, 0.031999998)
-texture = ExtResource("1_q7hlp")
+texture = ExtResource("3_467yg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wn3cm")
@@ -37,7 +37,7 @@ shape = SubResource("CircleShape2D_wn3cm")
 [node name="Particles" type="CPUParticles2D" parent="."]
 emitting = false
 amount = 10
-texture = ExtResource("1_q7hlp")
+texture = ExtResource("3_467yg")
 lifetime = 0.5
 one_shot = true
 explosiveness = 1.0

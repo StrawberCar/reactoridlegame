@@ -16,4 +16,4 @@ func _ready() -> void:
 	await get_tree().create_timer(0.6).timeout
 	$Status.text = "Loading Complete..."
 	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_file("res://Reactor.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Reactor.tscn")
